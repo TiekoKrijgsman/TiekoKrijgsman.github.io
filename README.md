@@ -20,8 +20,6 @@ This project is a website developed for the Web Markup course. It demonstrates f
 ## How to Run the Project Locally
 
 ### **Credits**
-If this is a solo project, you can simply mention your name. If you used resources or inspirations, list them here.
-
 Developed by Tieko Krijgsman.
 
 This project was completed as part of the Web Markup course at Inholland. Special thanks to the instructors for their guidance.
