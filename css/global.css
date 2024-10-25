@@ -91,12 +91,12 @@ nav ul li a.active {
 .hero {
     position: relative;
     text-align: center;
-    background-color: var(--primary-color-light);
 }
 
 .hero img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .hero-text {
@@ -208,25 +208,387 @@ figure figcaption {
     }
 }
 
-/* Footer */
-footer {
-    background-color: var(--primary-color-dark);
+
+ /* Text sectiom */
+ .text-section
+ {
+    background-color: var(--primary-bg-color);
     color: var(--neutral-font);
+    padding: 20px 250px;
     text-align: center;
-    padding: 10px 0;
+ }
+
+ .text-section h2
+ {
+    font-size: 1.8rem; 
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    color: var(--neutral-font)
+ }
+
+
+ .text section p
+ {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: var(--neutral-font);
+    margin-top: 0;
+ }
+
+
+ /* Info Cards Section */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 articles side by side */
+    gap: 30px; /* Spacing between the articles */
+    padding: 50px 100px; /* Adjust the padding */
+    max-width: 1200px; /* Ensure max width */
+    margin: 0 auto; /* Center the grid */
+}
+
+.card {
+    position: relative; /* Needed for the overlay button */
+    padding: 20px;
+    background-color: var(--secondary-color-light); /* Slightly lighter secondary color */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--neutral-font); /* Text color */
+    min-height: 200px; /* Ensure a minimum height for the cards */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.overlay-btn {
+    position: absolute; 
+    bottom: -20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--neutral-light); 
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: var(--primary-color-dark);
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease; 
+}
+
+.card:hover .overlay-btn {
+    transform: translate(-50%, -10px); 
+}
+
+@media only screen and (max-width: 768px) {
+    .info-cards {
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+/* Section with Image on Left and Text on Right */
+.image-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary-color-dark); 
+    padding: 50px; 
+    gap: 30px; 
+    max-width: 70%; 
+    margin: 0 auto; 
+
+    border-radius: 10px;
+}
+
+.image-text-section figure {
+    flex: 1;  
+    max-width: 33%;
+}
+
+.image-text-section img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px; 
+}
+
+.image-text-section article {
+    flex: 2; 
+    color: var(--neutral-font); 
+}
+
+.image-text-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--neutral-font);
+}
+
+.image-text-section ol {
+    line-height: 1.8; 
+    padding-left: 20px; 
+}
+
+.image-text-section ol li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.image-text-section strong {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+    .image-text-section {
+        flex-direction: column; 
+        text-align: center;
+        padding: 30px; 
+    }
+
+    .image-text-section figure, .image-text-section article {
+        max-width: 100%; 
+    }
+
+    .image-text-section img {
+        max-width: 80%; 
+    }
+}
+
+/* Benefits Section */
+.benefits-section {
+    max-width: 75%;
+    margin: 0 auto; 
+    padding: 50px 100px; 
+}
+
+.benefit {
+    display: grid;
+    grid-template-columns: 150px auto; 
+    align-items: center;
+    background-color: var(--primary-color-dark); 
+    color: var(--neutral-font); 
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin-bottom: 30px; /* Space between articles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.benefit figure {
+    margin: 0;
+    padding-right: 20px; /* Space between the image and the content */
+}
+
+.benefit figure img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover;  
+    border-radius: 10px; 
+}
+
+.text-content {
+    padding: 0 20px;
+}
+
+.benefit h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.benefit ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.benefit ul li {
+    margin-bottom: 10px;
+    line-height: 1.8;
 }
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+    .benefits-section {
+        padding: 30px 20px; /* Adjust padding for mobile */
     }
 
-    .services {
-        grid-template-columns: 1fr;
+    .benefit {
+        grid-template-columns: 1fr; /* Stack content vertically on smaller screens */
+        text-align: center;
     }
 
-    .hero-text {
-        font-size: 1.5rem;
+    .benefit figure {
+        margin-bottom: 15px; /* Space between image and text on mobile */
+    }
+
+    .benefit h3 {
+        font-size: 1.3rem; /* Adjust title size for mobile */
+    }
+}
+
+/* Cookies Notification Styling */
+.cookies-notification {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-color-dark);
+    color: var(--neutral-font);
+    text-align: center;
+    padding: 15px;
+    z-index: 9999; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); 
+    box-sizing: border-box;
+}
+
+.cookies-notification p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cookies-notification a {
+    color: var(--accent-color-1);
+    text-decoration: underline;
+}
+
+.cookies-btn {
+    background-color: var(--accent-color-1);
+    color: var(--primary-color-dark);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cookies-btn:hover {
+    background-color: var(--neutral-light);
+    color: var(--primary-color-dark);
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color-dark);
+    color: var(--neutral-font);
+    padding: 30px 20px; 
+}
+
+/* Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 10px; /* Add gap between columns for proper spacing */
+    max-width: 100%; /* Ensure the content doesn't stretch too wide */
+    margin: 0 auto; /* Center the footer grid */
+    align-items: start; /* Align content to the top of each cell */
+}
+
+/* Copyright Section */
+.footer-copyright {
+    grid-column: 1 / 5; /* Span all columns in the third row */
+    padding-top: 20px;
+    text-align: left;
+    font-size: 0.9rem;
+    padding-left: 0; /* Ensure it's aligned with the rest of the grid */
+}
+
+/* Ensure logo is aligned with titles */
+.footer-logo {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    text-align: left;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Title Styling */
+.footer-title {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1rem;
+    grid-row: 1;
+}
+
+/* Description, Social Media, Contact Info, and Page Links */
+.footer-description {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.footer-social,
+.footer-contact,
+.footer-pages {
+    grid-row: 2;
+    text-align: left;
+}
+
+.footer-social {
+    grid-column: 2;
+}
+
+.footer-contact {
+    grid-column: 3;
+}
+
+.footer-pages {
+    grid-column: 4;
+}
+
+.footer-pages a {
+    color: var(--neutral-font);
+    text-decoration: none;
+}
+
+.footer-pages a:hover {
+    text-decoration: underline;
+}
+
+/* Align all text in their columns */
+.footer-title p,
+.footer-description p,
+.footer-social p,
+.footer-contact p,
+.footer-pages p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+        grid-template-rows: auto; /* Adjust for vertical stacking */
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-title,
+    .footer-description,
+    .footer-social,
+    .footer-contact,
+    .footer-pages {
+        grid-column: 1; /* Make each item span the full width */
+        text-align: center;
+    }
+
+    .footer-copyright {
+        grid-column: 1;
+        text-align: center;
     }
 }
