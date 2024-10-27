@@ -82,6 +82,32 @@ body {
     margin-bottom: 40px;
 }
 
+@media only screen and (max-width: 768px) {
+    .hero .hero-text h1 {
+        font-size: 1rem;
+    }
+
+    .hero .hero-text h2 {
+        font-size: 0.7rem;
+    }
+
+    .buttons-container {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .btn-promoot, .btn-lees {
+        font-size: 0.5rem; 
+        border-radius: 8px; 
+    }
+
+    .page-description {
+        padding: 20px 20px; 
+        font-size: 1rem; 
+    }
+}
+
+
 
 
 .title-section {
@@ -211,6 +237,40 @@ body {
     color: var(--neutral-font);
 }
 
+@media only screen and (max-width: 768px) {
+    .collaboration-section {
+        flex-direction: column; 
+        padding: 20px 30px; 
+        max-width: 100%; 
+        margin: 20px auto; 
+    }
+
+    .left-side h2 {
+        font-size: 1.5rem; 
+    }
+
+    .left-side img {
+        width: 250px;
+        height: auto; 
+    }
+
+    .left-side p {
+        font-size: 0.9rem; 
+    }
+
+    .right-side h3 {
+        font-size: 1.2rem; 
+    }
+
+    .right-side p {
+        font-size: 0.9rem; 
+    }
+
+    .right-side {
+        gap: 15px; 
+    }
+}
+
 .reviews-section {
     text-align: center;
     padding: 50px 290px;
@@ -233,6 +293,8 @@ body {
     font-size: 1.2rem;
     color: var(--neutral-font);
 }
+
+
 
 .reviews-grid {
     display: flex;
@@ -264,4 +326,37 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--neutral-font);
+}
+
+@media only screen and (max-width: 768px) {
+    .reviews-section {
+        padding: 30px 20px; /* Reduce padding for mobile */
+    }
+
+    .reviews-section h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    .reviews-section p {
+        font-size: 1rem; /* Smaller font size for paragraph */
+    }
+    .reviews-grid {
+        flex-direction: column; /* Stack the items vertically */
+        gap: 30px; /* Reduce the gap between articles */
+        align-items: center; /* Center align items */
+    }
+
+    .review {
+        flex: 1 1 100%; /* Make each review take full width */
+        max-width: 100%; /* Allow full width */
+        text-align: center; /* Center text for better readability */
+    }
+
+    .review h3 {
+        font-size: 1.2rem; /* Reduce font size for mobile */
+    }
+
+    .review p {
+        font-size: 0.9rem; /* Reduce paragraph font size */
+    }
 }

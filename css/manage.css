@@ -6,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     text-align: center;
@@ -44,6 +43,21 @@ body {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero .hero-text h1 {
+        font-size: 1rem;
+    }
+
+    .hero .hero-text h2 {
+        font-size: 0.7rem;
+    }
+
+    .page-description {
+        padding: 20px 20px; 
+        font-size: 1rem; 
+    }
 }
 
 .rules-section {
@@ -107,6 +121,42 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--neutral-font);
+}
+
+@media only screen and (max-width: 768px) {
+    .rules-section {
+        padding: 30px 15px;
+    }
+
+    .rules-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .rules-section p {
+        font-size: 0.9rem;
+    }
+
+    .rules-flexbox {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .rule-item {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .rule-item img {
+        width: 120px;
+    }
+
+    .rule-item h3 {
+        font-size: 1rem;
+    }
+
+    .rule-item p {
+        font-size: 0.8rem;
+    }
 }
 
 .community-section {
@@ -223,4 +273,33 @@ body {
 .cta-btn:hover {
     background-color: var(--primary-color-light);
     color: var(--neutral-font);
+}
+
+@media only screen and (max-width: 768px) {
+    .community-section, .support-section {
+        padding: 20px 10px;
+    }
+
+    .community-flexbox, .support-flexbox {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+
+    .community-item, .support-item {
+        max-width: 100%; 
+        margin: 0 auto; 
+    }
+
+    .community-item h3, .support-item h3 {
+        font-size: 1rem;
+    }
+
+    .community-item p, .support-item p {
+        font-size: 0.85rem;
+    }
+
+    .cta-btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
 }

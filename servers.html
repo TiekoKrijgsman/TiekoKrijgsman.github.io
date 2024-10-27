@@ -10,15 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/servers.css" type="text/css"> 
     <link rel="stylesheet" href="css/global.css" type="text/css">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="desktop-nav">
+            <!-- Desktop Navigation -->
             <a href="index.html">
                 <img src="img/logo.png" alt="Fusey Logo" title="Fusey - Home" class="logo">
             </a>
-            <ul>
+            <ul class="desktop-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="servers.html" class="active">Servers</a></li>
                 <li><a href="promoot.html">Promoot</a></li>
@@ -27,15 +28,33 @@
             </ul>
             <a href="contact.html" class="contact-btn">Contact</a>
         </nav>
+    
+        <!-- Mobile Menu -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servers.html">Servers</a></li>
+                <li><a href="promoot.html">Promoot</a></li>
+                <li><a href="verdien.html">Verdien</a></li>
+                <li><a href="manage.html">Manage</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
 
     <section class="hero">
         <img src="img/hero-image.png" alt="Servers Hero Image" title="Vind de perfecte server">
-        <div class="hero-text">
+        <section class="hero-text">
             <h1>VIND DE PERFECTE SERVER</h1>
             <h2>VOOR JOUW SPEELSTIJL</h2>
-        </div>
+        </section>
     </section>
 
 
