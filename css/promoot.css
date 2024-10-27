@@ -313,26 +313,26 @@ body {
 @media only screen and (max-width: 768px) {
 
     .plans {
-        display: block; /* Stack plans vertically */
+        display: block; 
         margin: 0 auto;
-        padding: 0 20px; /* Reduce side padding */
+        padding: 0 20px; 
     }
 
     .plan {
-        margin-bottom: 1.5rem; /* Add spacing between stacked plans */
-        padding: 1rem; /* Reduce padding for smaller screens */
+        margin-bottom: 1.5rem; 
+        padding: 1rem; 
     }
 
     .plan h3 {
-        font-size: 1.2rem; /* Smaller heading for mobile */
+        font-size: 1.2rem;
     }
 
     .plan .price {
-        font-size: 1.5rem; /* Reduce price font size */
+        font-size: 1.5rem; 
     }
 
     .plan ul li {
-        font-size: 0.9rem; /* Smaller font size for list items */
+        font-size: 0.9rem; 
     }
 
     .cta-btn {
@@ -341,12 +341,12 @@ body {
     }
 
     .toggle-options {
-        flex-direction: column; /* Stack toggle buttons vertically */
+        flex-direction: column;
         gap: 0.5rem;
     }
 
     .promotion-options h2 {
-        font-size: 1.5rem; /* Slightly smaller title on mobile */
+        font-size: 1.5rem; 
     }
 }
 

@@ -1,0 +1,5 @@
+Student name: Tieko Krijgsman
+Student number: 731867
+Student class: HAINFVT1a
+GitHub Repository: https://github.com/TiekoKrijgsman/TiekoKrijgsman.github.io
+Gitub Pages URL: https://tiekokrijgsman.github.io/
