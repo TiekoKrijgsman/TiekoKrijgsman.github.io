@@ -12,9 +12,6 @@
 }
 
 .hero .hero-text {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
     color: var(--neutral-font);
     text-transform: uppercase;
     text-align: center;
